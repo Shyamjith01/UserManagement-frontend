@@ -1,0 +1,17 @@
+.greetings {
+    font-size: 52px;
+    color: #ffff;
+    font-family: -webkit-body;
+    font-weight: 800;
+    margin-top: 19%;
+}
+
+.home_btn {
+    padding: 10px;
+    background-color: #4cafaf;
+    color: #ffff;
+    border: none;
+    width: 8rem;
+    border-radius: 19px;
+    margin-top: 1rem;
+}

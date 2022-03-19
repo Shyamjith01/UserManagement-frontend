@@ -1,0 +1,97 @@
+.users_table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin-top: 2rem;
+
+  padding: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+}
+
+.users_table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+.users_table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+  height: 3.2rem;
+}
+
+.users_table th,
+.users_table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+.users_table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  .users_table {
+    border: 0;
+  }
+
+  .users_table caption {
+    font-size: 1.3em;
+  }
+
+  .users_table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .users_table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  .users_table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  .users_table td::before {
+    /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .users_table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.adminHeader {
+  color: white;
+  font-weight: 900;
+  margin-top: 1rem;
+  letter-spacing: 3px;
+}
+hr {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffff;
+}
