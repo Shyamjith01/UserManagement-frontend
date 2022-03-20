@@ -14,7 +14,7 @@ function Home() {
         let Uname = localStorage.getItem("username")
         let Uemail = localStorage.getItem("email")
         let Rname = Uname.replaceAll('"', '');
-        alert(Rname)
+
 
         setUserInfo({
             ...userInfo,

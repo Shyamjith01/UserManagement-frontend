@@ -19,8 +19,6 @@ function AdminLogin() {
             ...adminInfo,
             [name]: e.target.value
         }))
-
-        console.log(adminInfo, "yes")
     }
     const adminLogin = (e) => {
         e.preventDefault();
@@ -30,10 +28,10 @@ function AdminLogin() {
         } else if (password.length < 4) {
             toast.error("password must be 4 letter");
         } else {
-            console.log("inside of else");
+            
             axios.post('http://localhost:9000/admin/login', adminInfo)
                 .then((response) => {
-                    console.log(response, "this is the admim repsonse")
+                   
                     if (response.data.status) {
                         let obj = {
                             email: response.data.response.admin.email,
@@ -59,11 +57,6 @@ function AdminLogin() {
                         <p class="admin_loginHeader">ADMIN LOGIN</p>
                         <input type="email" placeholder="email" name="email" onChange={adminInput} />
                         <input type="password" placeholder="password" name="password" onChange={adminInput} />
-                        <div class="checkboxes">
-                            <input type="checkbox" id="remember-me" />
-                            <label for="remember-me">Remember Me</label>
-                        </div>
-                        <a href="/" class="forgot-password">Forgot Password!</a>
                         <button className='submitBtn' type='submit' >login</button>
                         <p class="message">Not registered? <Link to="/SignUp" >Sign Up</Link></p>
                     </form>

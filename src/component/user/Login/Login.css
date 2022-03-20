@@ -144,10 +144,10 @@ body {
 }
 
 .sign-in {
-    text-align: left;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 .forgot-password {
     text-decoration: underline;
@@ -170,4 +170,10 @@ input[type="checkbox" i] {
     margin: 3px 0.5ex;
     padding: initial;
     border: initial;
+}
+.googleBtn{
+    margin-top: 1rem;
+    border-radius: 7px !important;
+    width: 99%;
+    justify-content: center;
 }

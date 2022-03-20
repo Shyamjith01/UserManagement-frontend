@@ -144,10 +144,10 @@ body {
 }
 
 .sign-in {
-    text-align: left;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 .forgot-password {
     text-decoration: underline;

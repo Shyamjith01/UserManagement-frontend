@@ -16,7 +16,7 @@ function AdminHome() {
 
     useEffect(() => {
         axios.get('http://localhost:9000/admin/admin').then((response) => {
-            console.log(response.data, "all users")
+ 
             setAllusers(response.data)
 
         })
@@ -37,7 +37,7 @@ function AdminHome() {
                 if (id) {
                     axios.delete(`http://localhost:9000/admin/user-delete/${id}`)
                         .then((response) => {
-                            console.log(response, "delte response")
+                            
                             if (response.data.status) {
 
                                 Swal.fire(
@@ -146,7 +146,8 @@ function AdminHome() {
                             return (
                                 <tr key={key}>
                                     <td data-label="Account">{user.uname}</td>
-                                    <td data-label="Due Date">{user.MobileNumber}</td>
+                                    {user.MobileNumber ? (<td data-label="Due Date">{user.MobileNumber}</td>) : (<td data-label="Due Date">Not Allowed</td>)}
+
                                     <td data-label="Amount">{user.email}</td>
                                     {user.status ? (<td data-label="Amount">active</td>) : (<td data-label="Amount">Blocked</td>)}
                                     <td data-label="Period"><Link to={`/admin/Edit-user/${user._id}`} ><i class="fa-solid fa-pen-to-square" style={{ fontSize: '25px', color: 'blue', cursor: 'pointer' }} ></i></Link>

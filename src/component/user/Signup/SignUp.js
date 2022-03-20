@@ -33,7 +33,6 @@ function SignUp() {
                     if (resp.data.status == false) {
                         toast.error(resp.data.message)
                     } else {
-                        console.log(resp, "yes respnse")
                         let Userdata = {
                             id: resp.data.id,
                             name: resp.data.name,
@@ -58,7 +57,6 @@ function SignUp() {
             ...User,
             [name]: e.target.value
         }))
-        console.log(User, ":this");
     }
 
     return (
@@ -66,6 +64,7 @@ function SignUp() {
             <div class="login-page">
                 <div class="form">
                     <form class="register-formm" onSubmit={signUpfrom}>
+                        <p class="sign-in"> USER SIGNUP</p>
                         <input type="text" placeholder="First Name" name='fname' onChange={SignUpChanger} />
                         <input type="text" placeholder="Last Name" name='lname' onChange={SignUpChanger} />
                         <input type="text" placeholder="Username" name='uname' onChange={SignUpChanger} />
@@ -73,7 +72,7 @@ function SignUp() {
                         <input type="password" placeholder="Password" name='password' onChange={SignUpChanger} />
                         <input type="email" placeholder="E-mail address" name='email' onChange={SignUpChanger} />
                         <button type='submit' className='submit_btn'>create</button>
-                        <p class="message">Already registered? <Link to="/">Sign In</Link></p>
+                        <p class="message">Already registered? <Link to="/">login</Link></p>
                     </form>
                 </div>
             </div>

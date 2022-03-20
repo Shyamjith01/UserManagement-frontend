@@ -95,3 +95,9 @@ hr {
   margin-right: auto;
   color: #ffff;
 }
+.dataTables_length label{
+  color: #ffff;
+}
+.dataTables_filter label{
+  color: #ffff;
+}

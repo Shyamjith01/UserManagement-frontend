@@ -25,7 +25,6 @@ function EditUser() {
     useEffect(async () => {
         await axios.get(`http://localhost:9000/admin/Edit-user/${id}`)
             .then((response) => {
-                console.log(response, "this isthe edited resposnes");
                 if (response.data) {
                     setInputValue({
                         ...inputvalue,
@@ -47,23 +46,17 @@ function EditUser() {
             ...inputvalue,
             [name]: e.target.value
         })
-        console.log(inputvalue, "yessssss")
     }
 
     //form submition
     const userEditUpdation = (e) => {
         e.preventDefault()
-        console.log("inside of user edit")
 
         axios.post('http://localhost:9000/admin/userEdit-updation', inputvalue).then((response) => {
-            console.log("inside of then");
             toast.success("change Updated")
             navigate('/adminHome');
         })
     }
-
-
-    console.log(inputvalue, "this is input value")
     // alert(inputvalue)
 
     return (

@@ -11,6 +11,9 @@ import Home from './component/user/Home/Home';
 import AdminHome from './component/admin/adminHome/AdminHome';
 import AdminLogin from '../../UserManagement/src/component/admin/adminLogin/AdminLogin'
 import EditUser from './component/admin/EditUser/EditUser';
+import ForgetPassword from './component/user/forgetPassword/ForgetPassword';
+import ChangePassword from './component/user/passwordChange/ChangePassword';
+import Blockeduser from './component/admin/BlockedUsers/Blockeduser';
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
           <Route path='/admin' element={<AdminLogin />} />
           <Route path='/adminHome' element={<AdminHome />} />
           <Route path='/admin/Edit-user/:id' element={<EditUser />} />
+          <Route path='/forgetPassword' element={<ForgetPassword />} />
+          <Route path='/changePassword' element={<ChangePassword />} />
+          <Route path='/BlockedUsers' element={<Blockeduser />} />
         </Routes>
       </Router>
 
